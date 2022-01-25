@@ -7,7 +7,7 @@ const App = () => {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState("chicken");
+  const [query, setQuery] = useState("persian");
 
   const req = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
@@ -50,6 +50,7 @@ const App = () => {
           title={food.recipe.label}
           image={food.recipe.image}
           calories={food.recipe.calories}
+          ingred={food.recipe.ingredients}
         />
       ))}
     </div>
