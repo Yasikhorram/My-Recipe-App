@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Recipe from "./Recipe";
+import logo from "./logo.png";
 
 const App = () => {
   const APP_ID = "6007d3b9";
@@ -33,65 +34,15 @@ const App = () => {
 
   return (
     <div className="App">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav
+        className="navbar  navbar-light"
+        style={{ backgroundColor: "white" }}
+      >
         <div class="container-fluid">
+          <img className="logo" src={logo} />
           <a class="navbar-brand" href="#">
-            Welcome to MyDelish{" "}
+            <h1>Welcome to Delish</h1>{" "}
           </a>
-          {/* <button
-            class="navbar-toggler "
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  customer
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="#">
-                  contact
-                </a>
-              </li> */}
-          {/* <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Action
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Another action
-                    </a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="#">
-                      Something else here
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              </ul>
-              */}
 
           <form class="d-flex" onSubmit={getSearch}>
             <input
