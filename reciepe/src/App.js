@@ -33,13 +33,13 @@ const App = () => {
 
   return (
     <div className="App">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            Find Your Recipe
+            Welcome to MyDelish{" "}
           </a>
-          <button
-            class="navbar-toggler"
+          {/* <button
+            class="navbar-toggler "
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -53,15 +53,15 @@ const App = () => {
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
-                  Home
+                  customer
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Link
+                <a class="nav-link active" href="#">
+                  contact
                 </a>
-              </li>
-              <li class="nav-item dropdown">
+              </li> */}
+          {/* <li class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
@@ -90,21 +90,21 @@ const App = () => {
                   </li>
                 </ul>
               </li>
-            </ul>
+              </ul>
+              */}
 
-            <form class="d-flex" onSubmit={getSearch}>
-              <input
-                class="form-control me-2"
-                type="search"
-                value={search}
-                aria-label="Search"
-                onChange={changeHandler}
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
+          <form class="d-flex" onSubmit={getSearch}>
+            <input
+              class="form-control me-2"
+              type="search"
+              value={search}
+              aria-label="Search"
+              onChange={changeHandler}
+            />
+            <button class="btn btn-outline-danger" type="submit">
+              Search
+            </button>
+          </form>
         </div>
       </nav>
 
