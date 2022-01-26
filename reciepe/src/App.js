@@ -21,6 +21,9 @@ const App = () => {
     console.log("----", data.hits);
     setRecipes(data.hits);
   };
+  const changeHandler = (e) => {
+    setSearch(e.target.value);
+  };
 
   const getSearch = (e) => {
     e.preventDefault();
@@ -30,7 +33,82 @@ const App = () => {
 
   return (
     <div className="App">
-      <form className="searchForm" onSubmit={getSearch}>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            Find Your Recipe
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Link
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Another action
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Something else here
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <form class="d-flex" onSubmit={getSearch}>
+              <input
+                class="form-control me-2"
+                type="search"
+                value={search}
+                aria-label="Search"
+                onChange={changeHandler}
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      {/* <form className="searchForm" onSubmit={getSearch}>
         <input
           className="search-bar"
           type="text"
@@ -43,20 +121,21 @@ const App = () => {
         <button className="search-button" type="submit">
           Search
         </button>
-      </form>
-      {recipes.map((food) => (
-        <Recipe
-          key={food.recipe.label}
-          title={food.recipe.label}
-          image={food.recipe.image}
-          calories={food.recipe.calories}
-          ingred={food.recipe.ingredients}
-        />
-      ))}
+      </form> */}
+
+      <div className="recipes">
+        {recipes.map((food) => (
+          <Recipe
+            key={food.recipe.label}
+            title={food.recipe.label}
+            image={food.recipe.image}
+            calories={food.recipe.calories}
+            ingred={food.recipe.ingredients}
+          />
+        ))}
+      </div>
     </div>
   );
 };
 
 export default App;
-
-//title={food.recipe.label} image={} calories={}
