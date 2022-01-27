@@ -40,9 +40,7 @@ const App = () => {
       >
         <div class="container-fluid">
           <img className="logo" src={logo} />
-          <a class="navbar-brand" href="#">
-            <h1>Welcome to Delish</h1>{" "}
-          </a>
+          <a class="navbar-brand" href="#"></a>
 
           <form class="d-flex" onSubmit={getSearch}>
             <input
