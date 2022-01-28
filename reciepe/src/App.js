@@ -33,7 +33,7 @@ const App = () => {
   };
 
   return (
-    <div className="App">
+    <div>
       <nav
         className="navbar  navbar-light"
         style={{ backgroundColor: "white" }}
@@ -72,7 +72,7 @@ const App = () => {
         </button>
       </form> */}
 
-      <div className="recipes">
+      <div className="wrapper">
         {recipes.map((food) => (
           <Recipe
             key={food.recipe.label}
