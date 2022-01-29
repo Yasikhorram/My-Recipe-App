@@ -57,28 +57,12 @@ const App = () => {
         </div>
       </nav>
 
-      {/* <form className="searchForm" onSubmit={getSearch}>
-        <input
-          className="search-bar"
-          type="text"
-          value={search}
-          onChange={(e) => {
-            setSearch(e.target.value);
-            console.log(search);
-          }}
-        />
-        <button className="search-button" type="submit">
-          Search
-        </button>
-      </form> */}
-
       <div className="wrapper">
         {recipes.map((food) => (
           <Recipe
             key={food.recipe.label}
             title={food.recipe.label}
             image={food.recipe.image}
-            calories={food.recipe.calories}
             ingred={food.recipe.ingredients}
           />
         ))}

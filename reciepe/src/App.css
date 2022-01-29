@@ -17,20 +17,27 @@
 }
 
 .card {
-  box-shadow: 0 0 10px 5px;
-  border-radius: radius;
+  overflow: hidden;
+  box-shadow: 0 2px 20px;
   min-width: 28rem;
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* cursor: pointer; */
+  transition: transform 200ms ease-in;
 }
 
-.card-image {
-  width: 14rem;
-  height: 11rem;
+.card-img {
   object-fit: cover;
 }
 
 .card-body {
   margin: 1rem;
+}
+.title {
+  color: rgb(247, 99, 131);
+  font-family: "Bebas Neue", cursive;
+  font-size: 35px;
 }
 
 @media screen and (min-width: 600px) {
