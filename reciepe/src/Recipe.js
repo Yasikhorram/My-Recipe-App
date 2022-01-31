@@ -1,6 +1,6 @@
 const Recipe = ({ title, image, ingred }) => {
   return (
-    <div className="wrapper">
+    <div className="wrapper test">
       <div className="card">
         <img className="card-img" src={image} alt={title} />
 
@@ -8,7 +8,7 @@ const Recipe = ({ title, image, ingred }) => {
           <h1 className="title">{title}</h1>
           <ul className="card-description">
             {ingred.map((item) => (
-              <li>{item.text}</li>
+              <h6>{item.text}</h6>
             ))}
           </ul>
         </div>
